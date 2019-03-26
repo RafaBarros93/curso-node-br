@@ -1,0 +1,30 @@
+{
+    "name": "07-Multi-data",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "test": "mocha -w"
+    },
+    "scripts": {
+        "test": "mocha -w"
+    },
+    "keywords": [
+        "js",
+        "node",
+        "tdd",
+        "mocha",
+        "chai",
+        "npm"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "mocha": "^6.0.2",
+        "mongoose": "^5.4.20"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.0.2"
+    }
+}

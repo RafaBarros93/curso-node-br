@@ -21,6 +21,14 @@ class ContextStrategy extends ICrud {
     remove(id) {
         return this._database.remove(id, item);
     }
+
+    connect() {
+        return this._database.connect();
+    }
+
+    isConnect() {
+        return this._database.isConnect();
+    }
 }
 
 module.exports = ContextStrategy;
