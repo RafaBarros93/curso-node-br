@@ -33,6 +33,7 @@ class MongoDb extends Icrud {
 }
 
 class Context {
+    /*  */
     constructor(strategy) {
         this._database = strategy;
     }
