@@ -10,8 +10,8 @@ class ContextStrategy extends ICrud {
         return this._database.create(item);
     }
 
-    read(query = {}) {
-        return this._database.read(item);
+    list(query = {}) {
+        return this._database.list(query);
     }
 
     update(id, item = {}) {
@@ -19,7 +19,7 @@ class ContextStrategy extends ICrud {
     }
 
     remove(id) {
-        return this._database.remove(id, item);
+        return this._database.remove(id);
     }
 
     connect() {

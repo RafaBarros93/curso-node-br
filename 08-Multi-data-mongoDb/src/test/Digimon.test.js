@@ -43,4 +43,47 @@ describe("Digimon teste", () => {
 
         chai.expect(result).to.be.true;
     });
+
+    it("se atualiza um digimon ?", async () => {
+        let result;
+
+        const data = {
+            name: "WarGreymon",
+            power: 85000,
+            race: "Dragon"
+        };
+
+        try {
+            result = await context.update("5c9b8189ed62c03ce4838c3a", data);
+        } catch (error) {}
+
+        chai.expect(result).to.be.true;
+    });
+
+    it("se remove um digimon?", async () => {
+        let result;
+
+        try {
+            result = await context.remove("5c9b8189ed62c03ce4838c39");
+        } catch (error) {}
+
+        chai.expect(result).to.be.true;
+    });
+
+    it("se lista um digimon pelo _id?", async () => {
+        let result;
+
+        const query = {
+            _id: "5c9b8666d89970464f8e063d"
+        };
+
+        try {
+            result = await context.list(query);
+        } catch (error) {}
+
+        const { power, race } = result;
+
+        chai.expect(power).to.be.equal(3500);
+        chai.expect(race).to.be.equal("Dino");
+    });
 });

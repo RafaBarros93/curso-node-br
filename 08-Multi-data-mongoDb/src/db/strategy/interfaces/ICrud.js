@@ -9,7 +9,7 @@ class Icrud {
         throw new NotImplementedExeption();
     }
 
-    read(query = {}) {
+    list(query = {}) {
         throw new NotImplementedExeption();
     }
 

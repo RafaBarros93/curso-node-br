@@ -16,7 +16,7 @@ class Connection {
      */
     connect() {
         mongoose.connect(
-            "mongodb://localhost:27017/test",
+            "mongodb+srv://admin:123@cluster0-kgkln.mongodb.net/digimons?retryWrites=true",
             { useNewUrlParser: true },
             (error) => {
                 if (!error) return;
