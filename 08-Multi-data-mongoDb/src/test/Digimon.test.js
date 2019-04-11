@@ -18,7 +18,7 @@ describe("Digimon teste", () => {
             result = error;
         }
 
-        chai.expect(result).to.be.equal("Connect");
+        chai.expect(result).to.be.equal("Connected");
     });
 
     it("se insere digimon ?", async () => {
@@ -54,7 +54,7 @@ describe("Digimon teste", () => {
         };
 
         try {
-            result = await context.update("5c9b8189ed62c03ce4838c3a", data);
+            result = await context.update("5cae8ba5e38725494b9b3665", data);
         } catch (error) {}
 
         chai.expect(result).to.be.true;
@@ -64,7 +64,7 @@ describe("Digimon teste", () => {
         let result;
 
         try {
-            result = await context.remove("5c9b8189ed62c03ce4838c39");
+            result = await context.remove("5cae8ba5e38725494b9b3664");
         } catch (error) {}
 
         chai.expect(result).to.be.true;
@@ -74,7 +74,7 @@ describe("Digimon teste", () => {
         let result;
 
         const query = {
-            _id: "5c9b8666d89970464f8e063d"
+            _id: "5cae8ba5e38725494b9b3665"
         };
 
         try {
@@ -83,7 +83,7 @@ describe("Digimon teste", () => {
 
         const { power, race } = result;
 
-        chai.expect(power).to.be.equal(3500);
-        chai.expect(race).to.be.equal("Dino");
+        chai.expect(power).to.be.equal(85000);
+        chai.expect(race).to.be.equal("Dragon");
     });
 });
